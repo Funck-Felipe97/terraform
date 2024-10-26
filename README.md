@@ -79,7 +79,7 @@ output "api_base_url" {
 
 * You can create a remote state 
 
-´´´
+```
   terraform {
   required_version = ">= v1.9.2"
 
@@ -97,7 +97,7 @@ output "api_base_url" {
   }
 
 }
-´´´
+```
 
 * ´terraform show -json´ to give you a readable output of your state;
 * terraform state: Subcommands:
@@ -223,7 +223,7 @@ Ex: terraform refresh [options]
 
 * You can apply filters ´[for s in var.list : upper(s) if s != ""]´
 
-´´´
+```
 variable "users" {
   type = map(object({
     is_admin = bool
@@ -241,7 +241,7 @@ locals {
   }
 }
 
-´´´
+```
 
 ##### Splat Expressions
 
@@ -250,7 +250,7 @@ You can use ´var.list[*].id´ instand of ´[for o in var.list : o.id]´
 
 ##### Dynamic Block
 
-´´´
+```
 resource "aws_elastic_beanstalk_environment" "tfenvtest" {
   name                = "tf-test-name"
   application         = "${aws_elastic_beanstalk_application.tftest.name}"
@@ -266,4 +266,4 @@ resource "aws_elastic_beanstalk_environment" "tfenvtest" {
   }
 }
 
-´´´
+```
